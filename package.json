@@ -1,0 +1,33 @@
+{
+  "name": "threadwise-closet",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "scripts": {
+    "dev": "concurrently -k \"npm:server\" \"npm:vite\"",
+    "server": "node server/index.js",
+    "vite": "node ./node_modules/vite/dist/node/cli.js --host 0.0.0.0",
+    "build": "tsc -b && node ./node_modules/vite/dist/node/cli.js build",
+    "start": "node server/index.js",
+    "preview": "node ./node_modules/vite/dist/node/cli.js preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@imgly/background-removal": "^1.7.0",
+    "express": "^5.1.0",
+    "idb": "^8.0.3",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.15.30",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "concurrently": "^9.2.0",
+    "typescript": "^5.9.2",
+    "vite": "^6.3.5"
+  }
+}
